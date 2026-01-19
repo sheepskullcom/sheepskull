@@ -1,6 +1,6 @@
 // ====== YOUR LINKS ======
 const IG_PROFILE_URL = "https://www.instagram.com/sheepskull00?igsh=MTh3OWRhcHduanJxOQ==";
-const WHATSAPP_NUMBER = "91XXXXXXXXXX"; // ✅ replace this
+const WHATSAPP_NUMBER = "919573958420";
 // ========================
 
 const PRICE_TEXT = "₹270";
