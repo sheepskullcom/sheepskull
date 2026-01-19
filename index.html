@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SheepSkull — Case Designs</title>
+  <meta name="description" content="Browse SheepSkull phone case designs and order via Instagram/WhatsApp." />
+
+  <meta property="og:title" content="SheepSkull — Case Designs" />
+  <meta property="og:description" content="Browse collections and order fast." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logos/SHEEP-SKULL3.png" />
+
+  <link rel="icon" href="assets/logos/SHEEP-SKULL3.png" />
+
+  <!-- Font (premium UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header (Glass + Mobile Menu) -->
+  <header class="topbar">
+    <a class="brand" href="#">
+      <img class="brandMark" src="assets/logos/SHEEP-SKULL3.png" alt="SheepSkull logo" />
+      <div class="brandText">
+        <div class="brandName">sheepskull</div>
+        <div class="brandTag">Be a Unique Sheep</div>
+      </div>
+    </a>
+
+    <!-- Desktop actions -->
+    <div class="topActions topActionsDesktop">
+      <a class="btn btn-secondary" href="#catalog">Browse</a>
+      <a class="btn btn-primary" id="ctaInstagramDesktop" href="#" rel="noopener">Instagram DM</a>
+      <a class="btn btn-secondary" id="ctaWhatsappDesktop" href="#" rel="noopener">WhatsApp</a>
+    </div>
+
+    <!-- Mobile actions: Order + Menu -->
+    <div class="topActions topActionsMobile">
+      <a class="btn btn-primary" href="#catalog">Order</a>
+
+      <button
+        class="iconBtn"
+        id="menuBtn"
+        type="button"
+        aria-label="Open menu"
+        aria-haspopup="menu"
+        aria-expanded="false"
+      >
+        <span class="iconLines" aria-hidden="true"></span>
+      </button>
+
+      <div class="menu" id="menu" role="menu" aria-hidden="true">
+        <a class="menuItem" role="menuitem" href="#catalog">Browse</a>
+        <a class="menuItem" role="menuitem" id="ctaInstagramMobile" href="#" rel="noopener">Instagram DM</a>
+        <a class="menuItem" role="menuitem" id="ctaWhatsappMobile" href="#" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="heroCard">
+        <div class="badge">600+ designs • ₹270 • No COD</div>
+
+        <h1>Pick a design.<br/>We’ll fit your model.</h1>
+
+        <p class="sub">
+          We make cases for <b>all brands & models</b>. While ordering, just tell us your <b>phone model</b>.
+        </p>
+
+        <div class="heroCTAs">
+          <a class="btn btn-primary" href="#catalog">Explore Collections</a>
+          <a class="btn btn-secondary" href="#how">How to Order</a>
+        </div>
+
+        <div class="chipsRow">
+          <span class="chip">Minimal • bold • clean</span>
+          <span class="chip">Fast reply on DM/WhatsApp</span>
+          <span class="chip">Made to order</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- How -->
+    <section id="how" class="how">
+      <div class="howCard">
+        <div class="howTitle">How to order</div>
+        <div class="howSteps">
+          <div><b>1)</b> Choose a design</div>
+          <div><b>2)</b> Tap it to open</div>
+          <div><b>3)</b> Copy details & DM us</div>
+        </div>
+        <div class="howLine">
+          Price: <b>₹270</b> • COD: <b>Not Available</b> • Mention your <b>phone model</b>.
+        </div>
+      </div>
+    </section>
+
+    <!-- Catalog -->
+    <section id="catalog" class="catalog">
+      <div class="catalogHeader">
+        <div class="catalogTitleRow">
+          <h2>Collections</h2>
+          <div class="muted small" id="resultCount">Loading…</div>
+        </div>
+
+        <div id="collectionTabs" class="tabs" aria-label="Collections"></div>
+
+        <div class="searchRow">
+          <input id="searchInput" class="input" type="search" placeholder="Search (ex: wolf, skull, mandala, love)..." />
+          <button id="clearBtn" class="btn btn-secondary smallBtn" type="button">Clear</button>
+        </div>
+
+        <div class="muted small">
+          Tap a design → copy order details → DM us (Instagram / WhatsApp).
+        </div>
+      </div>
+
+      <div id="grid" class="grid" aria-live="polite"></div>
+
+      <footer class="siteFooter muted small">
+        © <span id="year"></span> SheepSkull • ₹270 • No COD
+      </footer>
+    </section>
+  </main>
+
+  <!-- Modal (FIXED mobile scroll) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modalBackdrop" data-close="true"></div>
+
+    <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button class="modalClose" title="Close" data-close="true">✕</button>
+
+      <!-- ✅ Scroll container -->
+      <div class="modalScroll">
+        <div class="modalBody">
+          <div class="modalMedia">
+            <img id="modalImg" class="modalImg" alt="" />
+          </div>
+
+          <div class="modalInfo">
+            <div class="modalTop">
+              <div>
+                <div id="modalName" class="modalName"></div>
+                <div class="muted small">
+                  Collection: <span id="modalCollection"></span>
+                </div>
+              </div>
+              <div class="idPill">ID: <span id="modalId" class="mono"></span></div>
+            </div>
+
+            <div class="modalMini">
+              <div class="muted small"> Works for all brands/models — please mention your phone model</div>
+              <div class="muted small"> Price: <b>₹270</b> •  No COD</div>
+            </div>
+
+            <div id="modalTags" class="modalTags"></div>
+
+            <div class="orderBox">
+              <div class="strong">Order this design</div>
+              <div class="muted small">Include your Phone Brand + Model (example: iPhone 14 / S23 Ultra / OnePlus 11).</div>
+
+              <!--  Sticky action bar on mobile -->
+              <div class="orderSticky">
+                <div class="orderBtns">
+                  <button id="copyBtn" class="btn btn-secondary" type="button">Copy Order Details</button>
+                  <a id="orderIG" class="btn btn-primary" href="#" rel="noopener">Instagram DM</a>
+                  <a id="orderWA" class="btn btn-secondary" href="#" rel="noopener">WhatsApp</a>
+                </div>
+              </div>
+
+              <textarea id="orderText" class="orderText" readonly></textarea>
+              <div id="copyToast" class="toast" aria-live="polite"></div>
+            </div>
+
+            <div class="footerNote muted small">
+              © <span id="year2"></span> SheepSkull
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /modalScroll -->
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
