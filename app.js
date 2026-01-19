@@ -140,15 +140,15 @@ function designImagePath(d){
 
 function buildOrderMessage(d){
   return [
-    "Hi SheepSkull! I want to order this design:",
+    "Hi SheepSkull! I want to order this case 👇",
     `Design ID: ${d.id}`,
     `Design Name: ${d.name || ("Design " + d.id)}`,
     `Collection: ${d.collection}`,
-    `Price: ${PRICE_TEXT}`,
-    `COD: ${COD_TEXT}`,
+    `Price: ${PRICE_TEXT} | COD: ${COD_TEXT}`,
     "",
-    "Phone Brand & Model: (example: iPhone 14 / S23 Ultra / OnePlus 11)",
-    "Quantity: 1"
+    "Phone Brand & Model: (ex: iPhone 14 / S23 Ultra / OnePlus 11)",
+    "Quantity: 1",
+    "Any Notes: (color / finish / special request)"
   ].join("\n");
 }
 

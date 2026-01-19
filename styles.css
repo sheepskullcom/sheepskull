@@ -9,18 +9,18 @@
   --ink: #121316;
   --muted: #5a6270;
 
-  --card: rgba(255,255,255,.78);
+  --card: rgba(255,255,255,.82);
   --line: rgba(18,19,22,.10);
 
   --shadow: 0 14px 38px rgba(18,19,22,.10);
   --radius: 18px;
   --radiusSm: 14px;
 
-  --glass: rgba(255,255,255,.55);
+  --glass: rgba(255,255,255,.60);
   --glassBorder: rgba(18,19,22,.07);
 
-  --btnPrimary: rgba(176,234,255,.95);
-  --btnPrimaryHover: rgba(176,234,255,.80);
+  --btnPrimary: rgba(176,234,255,.96);
+  --btnPrimaryHover: rgba(176,234,255,.82);
   --btnSecondary: rgba(255,255,255,.74);
   --btnSecondaryHover: rgba(255,255,255,.92);
 }
@@ -33,9 +33,9 @@ body{
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background:
     radial-gradient(900px 600px at 10% 0%, rgba(176,234,255,.55), transparent 60%),
-    radial-gradient(900px 600px at 90% 10%, rgba(236,176,255,.34), transparent 60%),
-    radial-gradient(900px 600px at 25% 95%, rgba(194,255,176,.28), transparent 60%),
-    radial-gradient(900px 600px at 75% 92%, rgba(255,188,176,.22), transparent 60%),
+    radial-gradient(900px 600px at 90% 10%, rgba(236,176,255,.32), transparent 60%),
+    radial-gradient(900px 600px at 25% 95%, rgba(194,255,176,.26), transparent 60%),
+    radial-gradient(900px 600px at 75% 92%, rgba(255,188,176,.20), transparent 60%),
     var(--bg);
 }
 
@@ -46,7 +46,11 @@ a{color:inherit;text-decoration:none}
 .strong{font-weight:800}
 .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
 
-/* ---------------- Header (blur) ---------------- */
+/* Icons */
+.icon{margin-right:8px; font-size:14px; opacity:.95}
+.iconSm{margin-right:8px; font-size:12px; opacity:.9}
+
+/* ---------------- Header ---------------- */
 .topbar{
   position:sticky; top:0; z-index:50;
   display:flex; align-items:center; justify-content:space-between;
@@ -59,10 +63,10 @@ a{color:inherit;text-decoration:none}
 }
 
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
-.brandMark{width:52px;height:52px;object-fit:contain;flex:0 0 auto}
+.brandMark{width:58px;height:58px;object-fit:contain;flex:0 0 auto}
 .brandText{min-width:0}
 .brandName{font-weight:800;font-size:18px;letter-spacing:-.3px;line-height:1}
-.brandTag{font-weight:600;font-size:12px;color:#2b3340;opacity:.85}
+.brandTag{font-weight:700;font-size:12px;color:#2b3340;opacity:.85}
 
 .topActions{display:flex;gap:8px;align-items:center;position:relative}
 .topActionsDesktop{display:none;}
@@ -70,7 +74,7 @@ a{color:inherit;text-decoration:none}
 
 @media (min-width: 900px){
   .wrap{padding:22px 16px 80px}
-  .brandMark{width:72px;height:72px}
+  .brandMark{width:78px;height:78px}
   .brandName{font-size:20px}
   .topActionsDesktop{display:flex;}
   .topActionsMobile{display:none;}
@@ -86,13 +90,13 @@ a{color:inherit;text-decoration:none}
   padding:0 14px;
   border-radius:999px;
   border:1px solid rgba(18,19,22,.10);
-  font-weight:700;
+  font-weight:800;
   letter-spacing:-.2px;
   cursor:pointer;
   transition: transform .12s ease, background .12s ease, filter .12s ease;
   white-space:nowrap;
 }
-.btn:hover{transform:translateY(-1px);filter:saturate(1.02)}
+.btn:hover{transform:translateY(-1px);filter:saturate(1.04)}
 .btn:active{transform:translateY(0)}
 .btn-primary{background: linear-gradient(180deg, var(--btnPrimary), var(--btnPrimaryHover));}
 .btn-secondary{background: var(--btnSecondary);}
@@ -128,11 +132,11 @@ a{color:inherit;text-decoration:none}
   position:absolute;
   right:0;
   top:52px;
-  min-width: 210px;
+  min-width: 220px;
   padding:8px;
   border-radius:16px;
   border:1px solid rgba(18,19,22,.10);
-  background: rgba(255,255,255,.92);
+  background: rgba(255,255,255,.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 16px 40px rgba(18,19,22,.14);
@@ -141,54 +145,103 @@ a{color:inherit;text-decoration:none}
 .menu.isOpen{display:block;}
 .menuItem{
   display:flex;
+  align-items:center;
+  gap:10px;
   padding:10px 12px;
   border-radius:12px;
-  font-weight:700;
+  font-weight:800;
 }
 .menuItem:hover{background: rgba(176,234,255,.28)}
 
 /* ---------------- Hero ---------------- */
 .hero{padding:12px 0 6px}
 .heroCard{
-  padding:16px;
+  padding:18px 16px;
   border:1px solid rgba(18,19,22,.10);
-  background: var(--card);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  background:
+    radial-gradient(700px 280px at 15% 0%, rgba(176,234,255,.55), transparent 60%),
+    radial-gradient(700px 280px at 85% 0%, rgba(236,176,255,.30), transparent 60%),
+    rgba(255,255,255,.78);
 }
 .badge{
   display:inline-flex;
+  align-items:center;
   padding:8px 12px;
   border-radius:999px;
-  background: rgba(234,255,176,.65);
+  background: rgba(234,255,176,.68);
   border:1px solid rgba(18,19,22,.10);
   font-size:12px;
-  font-weight:800;
+  font-weight:900;
   width:fit-content;
 }
 .heroCard h1{
   margin:14px 0 10px;
-  font-size:34px;
-  line-height:1.05;
-  letter-spacing:-.9px;
-  font-weight:800;
-  color:#2b3340;
+  font-size:38px;
+  line-height:1.02;
+  letter-spacing:-1px;
+  font-weight:900;
+  color:#1c222b;
 }
 .sub{margin:0;color:#2d3441;line-height:1.55}
 .heroCTAs{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 12px}
 .chipsRow{display:flex;gap:10px;flex-wrap:wrap}
 .chip{
+  display:inline-flex;
+  align-items:center;
   padding:8px 12px;
   border-radius:999px;
   border:1px solid rgba(18,19,22,.08);
-  background: rgba(255,255,255,.60);
+  background: rgba(255,255,255,.66);
   font-size:12px;
-  font-weight:650;
+  font-weight:750;
   color:#2b3340;
 }
 @media (min-width: 900px){
-  .heroCard{padding:18px}
-  .heroCard h1{font-size:44px}
+  .heroCard{padding:22px}
+  .heroCard h1{font-size:52px}
+}
+
+/* ---------------- About ---------------- */
+.about{margin:12px 0 14px}
+.aboutCard{
+  border:1px solid rgba(18,19,22,.10);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background:
+    radial-gradient(700px 260px at 10% 0%, rgba(255,188,176,.22), transparent 60%),
+    radial-gradient(700px 260px at 90% 0%, rgba(194,255,176,.18), transparent 60%),
+    rgba(255,255,255,.82);
+  padding:16px;
+}
+.aboutTitle{font-weight:900;font-size:16px;margin-bottom:8px;letter-spacing:-.2px}
+.aboutText{margin:0 0 10px;color:#2d3441;line-height:1.55}
+.aboutList{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:8px;
+  margin:10px 0 10px;
+}
+.aboutItem{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(18,19,22,.08);
+  background: rgba(255,255,255,.70);
+  font-weight:800;
+}
+.aboutQuote{
+  margin-top:10px;
+  padding-top:10px;
+  border-top:1px solid rgba(18,19,22,.08);
+  color:#2d3441;
+}
+@media (min-width: 900px){
+  .aboutCard{padding:18px}
+  .aboutList{grid-template-columns:repeat(3, 1fr)}
 }
 
 /* ---------------- How ---------------- */
@@ -200,9 +253,51 @@ a{color:inherit;text-decoration:none}
   box-shadow: var(--shadow);
   padding:14px 16px;
 }
-.howTitle{font-weight:800;font-size:16px;margin-bottom:8px}
+.howTitle{
+  font-weight:900;
+  font-size:16px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
 .howSteps{display:grid;grid-template-columns:1fr;gap:10px}
-.howLine{margin-top:10px;padding-top:10px;border-top:1px solid rgba(18,19,22,.08);color:#2d3441}
+.step{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(18,19,22,.08);
+  background: rgba(255,255,255,.72);
+  font-weight:700;
+}
+.stepIcon{
+  width:34px;height:34px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  background: rgba(176,234,255,.55);
+  border: 1px solid rgba(18,19,22,.08);
+}
+.stepIcon i{opacity:.9}
+.howLine{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid rgba(18,19,22,.08);
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.howPill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(18,19,22,.10);
+  background: rgba(234,255,176,.30);
+  font-weight:900;
+}
+.howNote{margin-top:10px}
 @media (min-width: 900px){
   .howSteps{grid-template-columns:repeat(3,1fr)}
 }
@@ -216,7 +311,7 @@ a{color:inherit;text-decoration:none}
 .tabs{display:flex;gap:10px;flex-wrap:wrap;padding:2px}
 .tab{
   font-size:12px;
-  font-weight:700;
+  font-weight:800;
   padding:8px 12px;
   border-radius:999px;
   border:1px solid rgba(18,19,22,.10);
@@ -260,13 +355,12 @@ a{color:inherit;text-decoration:none}
 .card:hover{transform:translateY(-2px)}
 .card img{width:100%;height:auto;display:block}
 .cardMeta{padding:10px 12px;border-top:1px solid rgba(18,19,22,.08)}
-.cardName{font-weight:800;font-size:14px}
+.cardName{font-weight:900;font-size:14px}
 .cardSub{color:var(--muted);font-size:12px;margin-top:4px}
 .siteFooter{margin-top:18px}
 
 /* ================================================================= */
-/* ✅ MODAL (your pasted block) */
-/* ---------------- Modal (BEST mobile approach) ---------------- */
+/* MODAL (kept from your version, minimal changes) */
 .modal{
   position:fixed;
   inset:0;
@@ -281,7 +375,6 @@ a{color:inherit;text-decoration:none}
   background: rgba(18,19,22,.42);
 }
 
-/* The card is fixed-size within viewport */
 .modalCard{
   position:relative;
   max-width: 980px;
@@ -295,7 +388,6 @@ a{color:inherit;text-decoration:none}
   max-height: calc(100vh - 24px);
 }
 
-/* Close always visible */
 .modalClose{
   position:absolute;
   right:12px;
@@ -308,7 +400,6 @@ a{color:inherit;text-decoration:none}
   z-index:5;
 }
 
-/* ✅ the scroll happens here */
 .modalScroll{
   height: 100%;
   max-height: calc(100vh - 24px);
@@ -316,24 +407,16 @@ a{color:inherit;text-decoration:none}
   -webkit-overflow-scrolling: touch;
 }
 
-/* Layout */
-.modalBody{
-  display:grid;
-  grid-template-columns: 1fr;
-}
-
-/* Desktop split view */
+.modalBody{display:grid;grid-template-columns: 1fr;}
 @media (min-width: 900px){
   .modalBody{grid-template-columns: 1.05fr .95fr;}
 }
 
-/* Media area: limit height on mobile */
 .modalMedia{
   background: rgba(18,19,22,.04);
   padding: 14px;
 }
 
-/* ✅ Image won’t take whole screen */
 .modalImg{
   width:100%;
   height:auto;
@@ -345,22 +428,15 @@ a{color:inherit;text-decoration:none}
 }
 
 @media (min-width: 900px){
-  .modalMedia{
-    padding: 0;
-    background: rgba(18,19,22,.04);
-  }
-  .modalImg{
-    max-height: 78vh;
-    height: 100%;
-    border-radius: 0;
-  }
+  .modalMedia{padding: 0;background: rgba(18,19,22,.04);}
+  .modalImg{max-height: 78vh;height: 100%;border-radius: 0;}
 }
 
 .modalInfo{padding:16px}
 .modalTop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
-.modalName{font-size:20px;font-weight:800;margin:0 0 6px}
+.modalName{font-size:20px;font-weight:900;margin:0 0 6px}
 .idPill{
-  font-size:12px;font-weight:800;
+  font-size:12px;font-weight:900;
   padding:8px 10px;border-radius:999px;
   border:1px solid rgba(18,19,22,.10);
   background: rgba(176,234,255,.70);
@@ -374,7 +450,7 @@ a{color:inherit;text-decoration:none}
   background: rgba(255,255,255,.70);
   padding:6px 10px;
   border-radius:999px;
-  font-weight:700;
+  font-weight:800;
 }
 
 .orderBox{
@@ -385,7 +461,6 @@ a{color:inherit;text-decoration:none}
   background: rgba(234,255,176,.20);
 }
 
-/* ✅ Sticky actions (mobile) */
 .orderSticky{
   position: sticky;
   top: 0;
@@ -410,27 +485,14 @@ a{color:inherit;text-decoration:none}
   font-size:12px;
 }
 
-.toast{margin-top:8px;font-weight:800}
+.toast{margin-top:8px;font-weight:900}
 
 @media (max-width: 520px){
-  .modalCard{
-    width: calc(100% - 16px);
-    margin: 8px auto;
-    max-height: calc(100vh - 16px);
-  }
-  .modalScroll{
-    max-height: calc(100vh - 16px);
-  }
+  .modalCard{width: calc(100% - 16px);margin: 8px auto;max-height: calc(100vh - 16px);}
+  .modalScroll{max-height: calc(100vh - 16px);}
   .modalImg{max-height: 38vh;}
 }
 
-/* ✅ Desktop: turn off sticky bar (cleaner on web) */
 @media (min-width: 900px){
-  .orderSticky{
-    position: static;
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    padding-top: 0;
-  }
+  .orderSticky{position: static;background: transparent;backdrop-filter: none;-webkit-backdrop-filter: none;padding-top: 0;}
 }

@@ -13,35 +13,56 @@
 
   <link rel="icon" href="assets/logos/SHEEP-SKULL3.png" />
 
-  <!-- Font (premium UI) -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    referrerpolicy="no-referrer"
+  />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Header (Glass + Mobile Menu) -->
+  <!-- Header -->
   <header class="topbar">
     <a class="brand" href="#">
       <img class="brandMark" src="assets/logos/SHEEP-SKULL3.png" alt="SheepSkull logo" />
       <div class="brandText">
         <div class="brandName">sheepskull</div>
-        <div class="brandTag">Be a Unique Sheep</div>
+        <div class="brandTag">Everyone is a sheep. Choose wisely.</div>
       </div>
     </a>
 
     <!-- Desktop actions -->
     <div class="topActions topActionsDesktop">
-      <a class="btn btn-secondary" href="#catalog">Browse</a>
-      <a class="btn btn-primary" id="ctaInstagramDesktop" href="#" rel="noopener">Instagram DM</a>
-      <a class="btn btn-secondary" id="ctaWhatsappDesktop" href="https://wa.me/919573958420" rel="noopener" target="_blank">WhatsApp</a>
+      <a class="btn btn-secondary" href="#catalog">
+        <i class="fa-solid fa-grid-2 icon"></i>
+        Browse
+      </a>
+
+      <a class="btn btn-primary" id="ctaInstagramDesktop" href="#" rel="noopener" target="_blank">
+        <i class="fa-brands fa-instagram icon"></i>
+        Instagram DM
+      </a>
+
+      <a class="btn btn-secondary" id="ctaWhatsappDesktop" href="#" rel="noopener" target="_blank">
+        <i class="fa-brands fa-whatsapp icon"></i>
+        WhatsApp
+      </a>
     </div>
 
-    <!-- Mobile actions: Order + Menu -->
+    <!-- Mobile actions -->
     <div class="topActions topActionsMobile">
-      <a class="btn btn-primary" href="#catalog">Order</a>
+      <a class="btn btn-primary" href="#catalog">
+        <i class="fa-solid fa-bag-shopping icon"></i>
+        Order
+      </a>
 
       <button
         class="iconBtn"
@@ -55,9 +76,15 @@
       </button>
 
       <div class="menu" id="menu" role="menu" aria-hidden="true">
-        <a class="menuItem" role="menuitem" href="#catalog">Browse</a>
-        <a class="menuItem" role="menuitem" id="ctaInstagramMobile" href="#" rel="noopener">Instagram DM</a>
-        <a class="menuItem" role="menuitem" id="ctaWhatsappMobile" href="https://wa.me/919573958420" rel="noopener" target="_blank">WhatsApp</a>
+        <a class="menuItem" role="menuitem" href="#catalog">
+          <i class="fa-solid fa-grid-2 icon"></i> Browse
+        </a>
+        <a class="menuItem" role="menuitem" id="ctaInstagramMobile" href="#" rel="noopener" target="_blank">
+          <i class="fa-brands fa-instagram icon"></i> Instagram DM
+        </a>
+        <a class="menuItem" role="menuitem" id="ctaWhatsappMobile" href="#" rel="noopener" target="_blank">
+          <i class="fa-brands fa-whatsapp icon"></i> WhatsApp
+        </a>
       </div>
     </div>
   </header>
@@ -66,38 +93,94 @@
     <!-- HERO -->
     <section class="hero">
       <div class="heroCard">
-        <div class="badge">600+ designs • ₹270 • No COD</div>
+        <div class="badge">
+          <i class="fa-solid fa-layer-group icon"></i>
+          600+ designs • ₹270 • Made-to-order
+        </div>
 
-        <h1>Pick a design.<br/>We’ll fit your model.</h1>
+        <h1>Everyone is a sheep. Choose wisely.</h1>
 
         <p class="sub">
-          We make cases for <b>all brands & models</b>. While ordering, just tell us your <b>phone model</b>.
+          Phone cases for people who don’t blend in.
+          <br/>
+          Pick a design — we’ll fit it perfectly to <b>your phone model</b>.
         </p>
 
         <div class="heroCTAs">
-          <a class="btn btn-primary" href="#catalog">Explore Collections</a>
-          <a class="btn btn-secondary" href="#how">How to Order</a>
+          <a class="btn btn-primary" href="#catalog">
+            <i class="fa-solid fa-compass icon"></i>
+            Explore Collections
+          </a>
+          <a class="btn btn-secondary" href="#how">
+            <i class="fa-solid fa-circle-info icon"></i>
+            How to Order
+          </a>
         </div>
 
         <div class="chipsRow">
-          <span class="chip">Minimal • bold • clean</span>
-          <span class="chip">Fast reply on DM/WhatsApp</span>
-          <span class="chip">Made to order</span>
+          <span class="chip"><i class="fa-solid fa-wand-magic-sparkles iconSm"></i> Fiber finish • Bold print</span>
+          <span class="chip"><i class="fa-solid fa-bolt iconSm"></i> Fast reply on DM/WhatsApp</span>
+          <span class="chip"><i class="fa-solid fa-shield-heart iconSm"></i> Made fresh for your model</span>
         </div>
       </div>
     </section>
 
-    <!-- How -->
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="aboutCard">
+        <div class="aboutTitle">About SheepSkull</div>
+
+        <p class="aboutText">
+          SheepSkull was created for people who don’t want to blend in.
+          We all play roles in society — but you get to decide how you play it.
+        </p>
+
+        <div class="aboutList">
+          <div class="aboutItem"><i class="fa-solid fa-check icon"></i> Think differently</div>
+          <div class="aboutItem"><i class="fa-solid fa-check icon"></i> Dress differently</div>
+          <div class="aboutItem"><i class="fa-solid fa-check icon"></i> Choose attitude over approval</div>
+        </div>
+
+        <div class="aboutQuote">
+          Every SheepSkull case represents a mindset:
+          <b>Be aware. Be bold. Be wise. </b>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
     <section id="how" class="how">
       <div class="howCard">
-        <div class="howTitle">How to order</div>
-        <div class="howSteps">
-          <div><b>1)</b> Choose a design</div>
-          <div><b>2)</b> Tap it to open</div>
-          <div><b>3)</b> Copy details & DM us</div>
+        <div class="howTitle">
+          <i class="fa-solid fa-bag-shopping icon"></i>
+          How to order (60 seconds)
         </div>
+
+        <div class="howSteps">
+          <div class="step">
+            <div class="stepIcon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="stepText"><b>1)</b> Choose a design you like</div>
+          </div>
+
+          <div class="step">
+            <div class="stepIcon"><i class="fa-solid fa-copy"></i></div>
+            <div class="stepText"><b>2)</b> Open it & copy order details</div>
+          </div>
+
+          <div class="step">
+            <div class="stepIcon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="stepText"><b>3)</b> Send on WhatsApp/Instagram with your phone model</div>
+          </div>
+        </div>
+
         <div class="howLine">
-          Price: <b>₹270</b> • COD: <b>Not Available</b> • Mention your <b>phone model</b>.
+          <span class="howPill"><i class="fa-solid fa-tag"></i> ₹270</span>
+          <span class="howPill"><i class="fa-solid fa-truck"></i> No COD</span>
+          <span class="howPill"><i class="fa-solid fa-mobile-screen-button"></i> All models</span>
+        </div>
+
+        <div class="muted small howNote">
+          Tip: Just send <b>Phone Brand + Model</b> (ex: iPhone 14 / S23 Ultra / OnePlus 11) with the design ID.
         </div>
       </div>
     </section>
@@ -114,7 +197,10 @@
 
         <div class="searchRow">
           <input id="searchInput" class="input" type="search" placeholder="Search (ex: wolf, skull, mandala, love)..." />
-          <button id="clearBtn" class="btn btn-secondary smallBtn" type="button">Clear</button>
+          <button id="clearBtn" class="btn btn-secondary smallBtn" type="button">
+            <i class="fa-solid fa-broom icon"></i>
+            Clear
+          </button>
         </div>
 
         <div class="muted small">
@@ -130,14 +216,13 @@
     </section>
   </main>
 
-  <!-- Modal (FIXED mobile scroll) -->
+  <!-- Modal -->
   <div id="modal" class="modal" aria-hidden="true">
     <div class="modalBackdrop" data-close="true"></div>
 
     <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="modalName">
       <button class="modalClose" title="Close" data-close="true">✕</button>
 
-      <!-- ✅ Scroll container -->
       <div class="modalScroll">
         <div class="modalBody">
           <div class="modalMedia">
@@ -156,22 +241,30 @@
             </div>
 
             <div class="modalMini">
-              <div class="muted small"> Works for all brands/models — please mention your phone model</div>
-              <div class="muted small"> Price: <b>₹270</b> •  No COD</div>
+              <div class="muted small"><i class="fa-solid fa-mobile-screen-button icon"></i> Works for all brands/models — share your phone model</div>
+              <div class="muted small"><i class="fa-solid fa-tag icon"></i> Price: <b>₹270</b> • <i class="fa-solid fa-truck icon"></i> No COD</div>
             </div>
 
             <div id="modalTags" class="modalTags"></div>
 
             <div class="orderBox">
               <div class="strong">Order this design</div>
-              <div class="muted small">Include your Phone Brand + Model (example: iPhone 14 / S23 Ultra / OnePlus 11).</div>
+              <div class="muted small">Send your Phone Brand + Model and we’ll confirm.</div>
 
-              <!--  Sticky action bar on mobile -->
               <div class="orderSticky">
                 <div class="orderBtns">
-                  <button id="copyBtn" class="btn btn-secondary" type="button">Copy Order Details</button>
-                  <a id="orderIG" class="btn btn-primary" href="#" rel="noopener">Instagram DM</a>
-                  <a id="orderWA" class="btn btn-secondary" href="https://wa.me/919573958420" rel="noopener" target="_blank">WhatsApp</a>
+                  <button id="copyBtn" class="btn btn-secondary" type="button">
+                    <i class="fa-solid fa-copy icon"></i>
+                    Copy Details
+                  </button>
+                  <a id="orderIG" class="btn btn-primary" href="#" rel="noopener" target="_blank">
+                    <i class="fa-brands fa-instagram icon"></i>
+                    Instagram DM
+                  </a>
+                  <a id="orderWA" class="btn btn-secondary" href="#" rel="noopener" target="_blank">
+                    <i class="fa-brands fa-whatsapp icon"></i>
+                    WhatsApp
+                  </a>
                 </div>
               </div>
 
@@ -185,7 +278,6 @@
           </div>
         </div>
       </div>
-      <!-- /modalScroll -->
     </div>
   </div>
 
